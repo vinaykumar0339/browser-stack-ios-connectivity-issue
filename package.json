@@ -1,0 +1,20 @@
+{
+  "name": "browser-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js",
+    "test:mobile": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@wdio/browserstack-service": "^9.16.2",
+    "dotenv": "^16.3.1",
+    "webdriverio": "^9.16.2"
+  },
+  "devDependencies": {
+    "@wdio/types": "^9.16.2"
+  }
+}
