@@ -20,6 +20,13 @@ const capabilities = {
     'appium:forceAppLaunch': false,
     'appium:noReset': false,
     'appium:settings[snapshotMaxDepth]': 60,
+    // removing this working in browserstack devices.
+    "appium:processArguments": {
+        "args": [
+            "-appiumTest",
+            "true"
+        ]
+    },
 };
 
 const localCapabilities = {
@@ -33,7 +40,14 @@ const localCapabilities = {
     "appium:noReset": false,
     "appium:settings[snapshotMaxDepth]": 60,
     "appium:udid": "<udid>",
-    "appium:webDriverAgentUrl": "http://<ip-address>:8100"
+    "appium:webDriverAgentUrl": "http://<ip-address>:8100",
+    // no issue with this in local real device testing
+    "appium:processArguments": {
+        "args": [
+            "-appiumTest",
+            "true"
+        ]
+    },
 }
 
 async function runMobileTest() {
